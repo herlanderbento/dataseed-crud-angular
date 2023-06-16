@@ -1,0 +1,46 @@
+{
+  "courses": [
+    {
+      "id": "C3KgIL_",
+      "name": "Animates CSS3",
+      "category": "Front-end"
+    },
+    {
+      "id": "RYq0Frq",
+      "name": "Carreira Backend Typescript Node.js ",
+      "category": "Back-end"
+    },
+    {
+      "name": "PHP",
+      "category": "back-end",
+      "id": "6hBqdAA"
+    },
+    {
+      "name": "JAVA",
+      "category": "Back-end",
+      "id": "XZXhBl_"
+    },
+    {
+      "id": "FI5FV44",
+      "name": "Carreira Backend C# .Net",
+      "category": "Back-end"
+    },
+    {
+      "id": "70u3uMO",
+      "name": "r",
+      "category": "Back-end"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Marcia Gaieta",
+      "email": [
+        "eugeniajoaogaieta@gmail.com"
+      ],
+      "password": [
+        "GuT77J-,~umHiY#"
+      ]
+    }
+  ]
+}
