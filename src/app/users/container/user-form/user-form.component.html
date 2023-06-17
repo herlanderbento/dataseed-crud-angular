@@ -2,9 +2,14 @@
   <mat-card-content>
     <form [formGroup]="form">
       <mat-form-field class="full-width">
-        <input matInput placeholder="Nome" formControlName="name" #name />
-        <mat-hint align="end">{{ name.value.length || 0 }} / 100</mat-hint>
-        <mat-error *ngIf="form.get('name')?.invalid">{{
+        <input
+          matInput
+          placeholder="Nome"
+          formControlName="name"
+          #name
+          required
+        />
+        <mat-error *ngIf="form.get('name')?.hasError('required')">{{
           getErrorMessage("name")
         }}</mat-error>
       </mat-form-field>
@@ -12,11 +17,17 @@
       <mat-form-field class="full-width">
         <mat-label>Email</mat-label>
         <input type="email" matInput formControlName="email" #email required />
+        <mat-error *ngIf="form.get('email')?.hasError('required')">{{
+          getErrorMessage("email")
+        }}</mat-error>
       </mat-form-field>
 
       <mat-form-field class="full-width">
         <mat-label>Password</mat-label>
-        <input type="password" matInput formControlName="password" #password />
+        <input type="password" matInput formControlName="password" required />
+        <mat-error *ngIf="form.get('password')?.hasError('required')">{{
+          getErrorMessage("password")
+        }}</mat-error>
       </mat-form-field>
     </form>
 

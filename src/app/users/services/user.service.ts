@@ -24,13 +24,9 @@ export class UserService implements UserRepositoryInterface {
   }
 
   public list(): Observable<UserModel[]> {
-    return this.httpClient.get<UserModel[]>(this.API).pipe(
-      first(),
-      delay(1000),
-      tap((response: UserModel[]): void => {
-        // console.log(response);
-      })
-    );
+    return this.httpClient
+      .get<UserModel[]>(this.API)
+      .pipe(first(), delay(1000));
   }
 
   public delete(id: string): Observable<void> {

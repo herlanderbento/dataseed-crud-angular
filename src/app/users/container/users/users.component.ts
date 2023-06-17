@@ -5,8 +5,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from '../../services/user.service';
-import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
-import { ConfirmationDialogComponent } from 'src/app/shared/components/confirmation-dialog/confirmation-dialog.component';
+import { ErrorDialogComponent } from '../../../shared/components/error-dialog/error-dialog.component';
+import { ConfirmationDialogComponent } from '../../../shared/components/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-users',
@@ -23,7 +23,7 @@ export class UsersComponent {
     private route: ActivatedRoute,
     private snackBar: MatSnackBar
   ) {
-    this.refresh()
+    this.refresh();
   }
 
   public refresh(): void {
@@ -42,12 +42,12 @@ export class UsersComponent {
   }
 
   public async onAdd() {
-    await this.router.navigate(['form'], { relativeTo: this.route });
+    await this.router.navigate(['user'], { relativeTo: this.route });
   }
 
   public async onEdit(user: UserModel) {
-    console.log(user)
-    await this.router.navigate(['edit', user.id], { relativeTo: this.route });
+    console.log(user);
+    await this.router.navigate(['user', user.id], { relativeTo: this.route });
   }
 
   public onRemove(user: UserModel) {

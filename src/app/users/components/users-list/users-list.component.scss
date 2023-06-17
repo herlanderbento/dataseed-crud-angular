@@ -1,3 +1,15 @@
+
+.cta{
+  display: flex;
+  justify-content: end;
+  padding: 1rem 2rem;
+  margin-right: auto !important;
+
+  button{
+    padding: 1.5rem 2rem !important;
+  }
+}
+
 .mat-table {
   overflow: auto;
   max-height: 600px;
@@ -12,7 +24,37 @@
 }
 
 mat-table{
-  box-shadow: none !important;
   border: 0;
-  background-color: black;
+  background: transparent !important;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+}
+
+table{
+  box-shadow: none !important;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+  background-color: transparent !important;
+  border-top: 1px solid #ccc !important;
+
+  th{
+    padding: .5rem 2rem;
+    border-bottom-style: none !important;
+
+  }
+  td{
+    padding: .5rem 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.02);
+
+    &:first-child {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    &:last-child {
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  }
 }

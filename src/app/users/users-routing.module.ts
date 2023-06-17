@@ -7,14 +7,14 @@ import { UserResolve } from './guards/user.resolver';
 const routes: Routes = [
   { path: '', component: UsersComponent },
   {
-    path: 'form',
+    path: 'user',
     component: UserFormComponent,
     resolve: {
       user: UserResolve,
     },
   },
   {
-    path: 'edit/:id',
+    path: 'user/:id',
     component: UserFormComponent,
     resolve: {
       user: UserResolve,

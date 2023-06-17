@@ -1,46 +1,66 @@
 {
-  "courses": [
-    {
-      "id": "C3KgIL_",
-      "name": "Animates CSS3",
-      "category": "Front-end"
-    },
-    {
-      "id": "RYq0Frq",
-      "name": "Carreira Backend Typescript Node.js ",
-      "category": "Back-end"
-    },
-    {
-      "name": "PHP",
-      "category": "back-end",
-      "id": "6hBqdAA"
-    },
-    {
-      "name": "JAVA",
-      "category": "Back-end",
-      "id": "XZXhBl_"
-    },
-    {
-      "id": "FI5FV44",
-      "name": "Carreira Backend C# .Net",
-      "category": "Back-end"
-    },
-    {
-      "id": "70u3uMO",
-      "name": "r",
-      "category": "Back-end"
-    }
-  ],
   "users": [
     {
       "id": 1,
-      "name": "Marcia Gaieta",
+      "name": "Eugenia Gaieta",
       "email": [
-        "eugeniajoaogaieta@gmail.com"
+        [
+          [
+            [
+              [
+                [
+                  "eugeniajoaogaieta@gmail.com"
+                ]
+              ]
+            ]
+          ]
+        ]
       ],
       "password": [
-        "GuT77J-,~umHiY#"
+        [
+          [
+            [
+              [
+                [
+                  "GuT77J-,~umHiY#"
+                ]
+              ]
+            ]
+          ]
+        ]
       ]
+    },
+    {
+      "id": 3,
+      "name": "Herlander Bento",
+      "email": "herlanderbento19@gmail.com",
+      "password": "herlanderbento19@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Herlander Bento",
+      "email": [
+        [
+          "herlanderbento19@gmail.com"
+        ]
+      ],
+      "password": [
+        [
+          "herlanderbento19@gmail.com"
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Herlander de Castro",
+      "email": "herlanderbento19@gmail.com",
+      "password": "herlanderbento19@gmail.com"
+    },
+    {
+      "id": 7,
+      "name": "Paulo Estêvão ",
+      "email": "herlanderbento19@gmail.com",
+      "password": "herlanderbento19@gmail.com"
     }
   ]
 }

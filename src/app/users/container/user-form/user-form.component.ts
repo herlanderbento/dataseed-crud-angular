@@ -23,30 +23,27 @@ export class UserFormComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const user: UserModel = this.route.snapshot.data['user']
+    const user: UserModel = this.route.snapshot?.data['user'];
+
     this.form = this.formBuilder.group({
-      id: [user.id],
+      id: [user?.id],
       name: [
-        [user.name],
+        [user?.name],
         [
           Validators.required,
           Validators.minLength(5),
           Validators.maxLength(100),
         ],
       ],
-      email: [
-        [user.email],
-        [
-          Validators.required,
-          Validators.minLength(5),
-          Validators.maxLength(100),
-        ],
-      ],
+      email: this.formBuilder.control(
+        [user?.email],
+        [Validators.required, Validators.email]
+      ),
       password: [
-        [user.password],
+        [user?.password],
         [
           Validators.required,
-          Validators.minLength(5),
+          Validators.minLength(6),
           Validators.maxLength(100),
         ],
       ],
@@ -54,10 +51,13 @@ export class UserFormComponent implements OnInit {
   }
 
   public onSubmit() {
-    this.service.save(this.form.value).subscribe({
-      next: () => this.onSuccess(),
-      error: () => this.onError(),
-    });
+    const { id, name, email, password } = this.form.value;
+
+    if (id && name && email && password) {
+      this.save(this.form.value);
+    }
+
+    return this.form.valid ? this.save(this.form.value) : null;
   }
 
   public onCancel() {
@@ -86,6 +86,13 @@ export class UserFormComponent implements OnInit {
     }
 
     return 'Campo Inválido';
+  }
+
+  private save(data: Partial<UserModel>) {
+    this.service.save(data).subscribe({
+      next: () => this.onSuccess(),
+      error: () => this.onError(),
+    });
   }
 
   private onSuccess() {
